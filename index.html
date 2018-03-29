@@ -3,18 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Pocket Ghibli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript"></script>
-   
+    <script src="./js/main.js"></script>   
 </head>
 <body>
     <!-- Initial State -->
     <div class="bg-sky">
-        <div>
+        <div class="js-mainMenuDiv">
             <img src="./images/kodama.png" height="320px" width="300px"/>
             <button class="js-movie-button">movie look up</button>
             <img src="./images/teto.png"/>
@@ -22,8 +21,11 @@
             <img src="./images/totoro.png"/>
             <button class="js-spirit-quiz-button">what spirit are you?</button>
         </div>
+        <div class="resetDiv">
+            <button class="js-resetDiv">Main Menu</button>
+        </div>
     </div>
 
-    <script src="./js/main.js"></script>
+
 </body>
 </html>
