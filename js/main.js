@@ -50,17 +50,19 @@ function renderMovieRef() {
 }
 
 function movieRefCall() {
-    let movieName = $(this).attr("data-name");
+    let movieName = "&query=" + $(this).attr("data-name");
     console.log(movieName);
     console.log(this);
-    let apiKey = "5cd1ecff8ea6adcee13ecffc24c20aa2";
-    let queryURL = "https://api.themoviedb.org/3/movie/550?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
+    let apiKey = "?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
+    let queryURL = "https://api.themoviedb.org/3/search/movie";
+    let noPorn = "&include_adult=false"
     $.ajax({
-        url: queryURL,
+        url: queryURL + apiKey + movieName + noPorn,
         method: "GET",
 
     }).then(function(response){
-        console.log(response);
+        let result = response;
+        console.log(result.results[0].overview);
     })
 }
 
