@@ -53,30 +53,15 @@ function movieRefCall() {
     let movieName = $(this).attr("data-name");
     console.log(movieName);
     console.log(this);
-    let queryURL = "https://ghibliapi.herokuapp.com/films";
-    let myInit = {
-        method: 'GET',
-        mode: 'no-cors',
-        cache: 'default'
-    };
-    fetch(queryURL, myInit)
-    .then(
-      function(response) {
-        if (response.status !== 200) {
-          console.log('Looks like there was a problem. Status Code: ' +
-            response.status);
-          return;
-        }
-  
-        // Examine the text in the response
-        response.json().then(function(data) {
-          console.log(data);
-        });
-      }
-    )
-    .catch(function(err) {
-      console.log('Fetch Error :-S', err);
-    });
+    let apiKey = "5cd1ecff8ea6adcee13ecffc24c20aa2";
+    let queryURL = "https://api.themoviedb.org/3/movie/550?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+
+    }).then(function(response){
+        console.log(response);
+    })
 }
 
 function mainMenu() {
