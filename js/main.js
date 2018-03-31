@@ -51,6 +51,7 @@ function renderMovieRef() {
 
 function movieRefCall() {
     let movieName = "&query=" + $(this).attr("data-name");
+    let cssStyle = 
     console.log(movieName);
     console.log(this);
     let apiKey = "?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
