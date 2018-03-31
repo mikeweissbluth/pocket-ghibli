@@ -15,38 +15,128 @@ function hideMenu() {
     $(".js-resetDiv").show();
 }
 
+// function renderMovieRef() {
+//     let movieRefArray = [
+//         "Laputa: Castle in the Sky", 
+//         "Grave of the Fireflies,", 
+//         "My Neighbor Totoro", 
+//         "Kiki's Delivery Service", 
+//         "Only Yesterday", 
+//         "Porco Rosso", 
+//         "Ocean Waves", 
+//         "Pom Poko", 
+//         "Whisper of the Heart", 
+//         "Princess Mononoke", 
+//         "My Neighbors the Yamadas", 
+//         "Spirited Away", 
+//         "The Cat Returns", 
+//         "Howl's Moving Castle", 
+//         "Tales from Earthsea", 
+//         "Ponyo", "Arrietty", 
+//         "From Up on Poppy Hill", 
+//         "The Wind Rises", 
+//         "The Tale of the Princess Kaguya", 
+//         "When Marnie Was There", 
+//         "How Do You Live?"
+//     ];
+//     $(".js-movie-ref-div").empty();
+//     for (let i = 0; i < movieRefArray.length; i++) {
+//         var movieRefItem = $("<button>");
+//         movieRefItem.addClass("js-movieRef");
+//         movieRefItem.attr("data-name", movieRefArray[i]);
+//         movieRefItem.text(movieRefArray[i]);
+//         $(".js-movie-ref-div").append(movieRefItem);
+//     }
+// }
+
+let recentlyAddedClass = "";
+let recentlyEditedElement = "";
+
 function renderMovieRef() {
     let movieRefArray = [
-        "Laputa: Castle in the Sky", 
-        "Grave of the Fireflies,", 
-        "My Neighbor Totoro", 
-        "Kiki's Delivery Service", 
-        "Only Yesterday", 
-        "Porco Rosso", 
-        "Ocean Waves", 
-        "Pom Poko", 
-        "Whisper of the Heart", 
-        "Princess Mononoke", 
-        "My Neighbors the Yamadas", 
-        "Spirited Away", 
-        "The Cat Returns", 
-        "Howl's Moving Castle", 
-        "Tales from Earthsea", 
-        "Ponyo", "Arrietty", 
-        "From Up on Poppy Hill", 
-        "The Wind Rises", 
-        "The Tale of the Princess Kaguya", 
-        "When Marnie Was There", 
-        "How Do You Live?"
+        { "name": "Laputa: Castle in the Sky",
+        "addbackground" : "bg-laputa",
+    },
+        { name:"Grave of the Fireflies",
+        "addbackground" : "bg-fireflies", 
+    },
+        { name:"My Neighbor Totoro",
+        "addbackground" : $("#background").addClass("bg-totoro"),
+    }, 
+        { name:"Kiki's Delivery Service",
+        "addbackground" : $("#background").addClass("bg-kiki"),
+    }, 
+        { name:"Only Yesterday", 
+        "addbackground" : $("#background").addClass("bg-yesterday"),
+    },
+        { name:"Porco Rosso", 
+        "addbackground" : $("#background").addClass("bg-rosso"),
+    },
+        { name:"Ocean Waves",
+        "addbackground" : $("#background").addClass("bg-ocean"), 
+    },
+        { name:"Pom Poko",
+        "addbackground" : $("#background").addClass("bg-poko"),
+    }, 
+        { name:"Whisper of the Heart", 
+        "addbackground" : $("#background").addClass("bg-heart"),
+    },
+        { name:"Princess Mononoke",
+        "addbackground" : $("#background").addClass("bg-mononoke"),
+    }, 
+        { name:"My Neighbors the Yamadas",
+        "addbackground" : $("#background").addClass("bg-yamadas"),
+    }, 
+        { name:"Spirited Away",
+        "addbackground" : $("#background").addClass("bg-spirit"), 
+    },
+        { name:"The Cat Returns", 
+        "addbackground" : $("#background").addClass("bg-cat"),
+    },
+        { name:"Howl's Moving Castle",
+        "addbackground" : $("#background").addClass("bg-castle"), 
+    },
+        { name:"Tales from Earthsea", 
+        "addbackground" : $("#background").addClass("bg-earthsea"),
+    },
+        { name: "Ponyo", 
+        "addbackground" : $("#background").addClass("bg-ponyo"),
+    },
+        {name: "Arrietty",
+        "addbackground" : $("#background").addClass("bg-arrietty"),
+    },
+        { name:"From Up on Poppy Hill",
+        "addbackground" : $("#background").addClass("bg-hill"), 
+    },
+        { name:"The Wind Rises",
+        "addbackground" : $("#background").addClass("bg-wind"), 
+    },
+        { name:"The Tale of the Princess Kaguya",
+        "addbackground" : $("#background").addClass("bg-princess"), 
+    },
+        { name:"When Marnie Was There", 
+        "addbackground" : $("#background").addClass("bg-marnie"),
+    },
+        { name: "How Do You Live?",
+        "addbackground" : $("#background").addClass("bg-live"),
+    }
     ];
     $(".js-movie-ref-div").empty();
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<button>");
         movieRefItem.addClass("js-movieRef");
-        movieRefItem.attr("data-name", movieRefArray[i]);
-        movieRefItem.text(movieRefArray[i]);
+        movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground)
+        movieRefItem.attr("data-name", movieRefArray[i].name);
+        movieRefItem.text(movieRefArray[i].name);
         $(".js-movie-ref-div").append(movieRefItem);
     }
+}
+
+function addClass(classToAdd) {
+    $("#background").addClass(classToAdd);
+}
+function removeClass(classToRemove) {
+    $("#background").removeClass(classToRemove);
 }
 
 function movieRefCall() {
@@ -82,7 +172,16 @@ function mainMenu() {
         console.log("js-movie button success");
     })
     //Click of Movie in Movie References
-    $(document).on("click", ".js-movieRef", movieRefCall);
+    $(document).on("click", ".js-movieRef", function() {
+        let dataFromDom = $(this).data().classtoadd;
+        // console.log("data elem: ", $(this).data().classtoadd);
+        //movieRefCall();
+        $("#background").addClass(dataFromDom);
+        classToRemove(recentlyAddedClass);
+        recentlyAddedClass = dataFromDom;
+        recentlyEditedElement = $(this);
+    }
+);
         //Calls up individual Movie Page
         //Calls Wikipedia API for Description of Movie
         //Return to Main Menu Button

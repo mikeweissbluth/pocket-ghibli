@@ -13,15 +13,19 @@
 .bb-color {
     background-color: #d3d3d3
 }
-.bg-sky {
-    background: rgba(104, 205, 230, 0.692)
-}
 .bg-teal {
     background: #57BAC6  
 }
 .bg-cover {
     background-size: cover; 
 }
+.bg-laputa {
+    background: green;
+}
+.bg-fireflies {
+    background: orange;
+}
+
 
 button {
     border: solid 4px #323232  ;
@@ -133,9 +137,9 @@ font-family: 'Bangers', cursive;
 
 /* Movies */
 /* spirited away */
-.bg-spirit {
+/* .bg-spirit {
     background: rgba(104, 205, 230, 0.692);
-}
+} */
 
 
 /* P */
