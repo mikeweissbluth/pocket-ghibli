@@ -31,9 +31,9 @@ function movieRefCall() {
     let movieName = $(this).attr("data-name");
     console.log(movieName);
     console.log(this);
-    let queryBase ="https://ghibliapi.herokuapp.com/films";
+    let queryURL = "https://ghibliapi.herokuapp.com/films";
     $.ajax({
-        url: queryBase,
+        url: queryURL,
         method: "GET"
     }).then(function(response) {
         console.log(response);
