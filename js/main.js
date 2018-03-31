@@ -16,7 +16,29 @@ function hideMenu() {
 }
 
 function renderMovieRef() {
-    let movieRefArray = ["Laputa: Castle in the Sky", "Grave of the Fireflies,", "My Neighbor Totoro", "Kiki's Delivery Service", "Only Yesterday", "Porco Rosso", "Ocean Waves", "Pom Poko", "Whisper of the Heart", "Princess Mononoke", "My Neighbors the Yamadas", "Spirited Away", "The Cat Returns", "Howl's Moving Castle", "Tales from Earthsea", "Ponyo", "Arrietty", "From Up on Poppy Hill", "The Wind Rises", "The Tale of the Princess Kaguya", "When Marnie Was There", "How Do You Live?"];
+    let movieRefArray = [
+        "Laputa: Castle in the Sky", 
+        "Grave of the Fireflies,", 
+        "My Neighbor Totoro", 
+        "Kiki's Delivery Service", 
+        "Only Yesterday", 
+        "Porco Rosso", 
+        "Ocean Waves", 
+        "Pom Poko", 
+        "Whisper of the Heart", 
+        "Princess Mononoke", 
+        "My Neighbors the Yamadas", 
+        "Spirited Away", 
+        "The Cat Returns", 
+        "Howl's Moving Castle", 
+        "Tales from Earthsea", 
+        "Ponyo", "Arrietty", 
+        "From Up on Poppy Hill", 
+        "The Wind Rises", 
+        "The Tale of the Princess Kaguya", 
+        "When Marnie Was There", 
+        "How Do You Live?"
+    ];
     $(".js-movie-ref-div").empty();
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<button>");
@@ -32,12 +54,29 @@ function movieRefCall() {
     console.log(movieName);
     console.log(this);
     let queryURL = "https://ghibliapi.herokuapp.com/films";
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
-        console.log(response);
-    })
+    let myInit = {
+        method: 'GET',
+        mode: 'no-cors',
+        cache: 'default'
+    };
+    fetch(queryURL, myInit)
+    .then(
+      function(response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+          return;
+        }
+  
+        // Examine the text in the response
+        response.json().then(function(data) {
+          console.log(data);
+        });
+      }
+    )
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
 }
 
 function mainMenu() {
@@ -83,8 +122,6 @@ function mainMenu() {
     $(document).on("click", ".js-resetDiv", function() {
         mainMenu();
     })
-    $(document).on("click", ".js-movieRef", movieRefCall);
-
 
 }); // Closing of Document Ready
 
