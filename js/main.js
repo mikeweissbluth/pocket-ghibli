@@ -60,8 +60,6 @@ function renderMovieRef() {
     }, 
         { name:"Spirited Away",
         addbackground: "bg-spirit", 
-        image: "../images/spirit-flowers.png",
-        character: ""
     },
         { name: "The Cat Returns", 
         addbackground: "bg-cat",
@@ -113,13 +111,6 @@ function addClass(classToAdd) {
 function removeClass(classToRemove) {
     $("#background").removeClass(classToRemove);
 }
-//for images to populate
-function addImage(imageToAdd) {
-    $("#images").prepend("<img src=" + imageToAdd + "/>");
-}
-function removeImage(imageToRemove) {
-    $("#images").remove(imageToRemove);
-}
 
 function movieRefCall() {
     let movieName = "&query=" + $(this).attr("data-name");
@@ -159,17 +150,10 @@ function mainMenu() {
         // console.log("data elem: ", $(this).data().classtoadd);
         //movieRefCall();
         $("#background").addClass(dataFromDom);
-        //classToRemove(recentlyAddedClass); << What Steven had. Giving me an error in console?
         removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
 
-        let imgFromDom = $(this).data().imagetoadd;
-
-        $("#images").prepend(imgFromDom);
-        removeImage(recentlyAddedImage);
-        recentlyAddedImage = imgFromDom;
-        recentlyEditedImage = $(this);
     }
 );
         //Calls up individual Movie Page

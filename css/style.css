@@ -10,6 +10,11 @@
 .border-box {
     box-sizing: border-box;
 }
+.box {
+    height: 300px;
+    width: 400px; 
+    background-color: white;
+}
 .bb-color {
     background-color: #d3d3d3
 }
@@ -18,11 +23,7 @@
     animation: bg-initial 30s ease infinite; 
     background-size: 800% 800%
 }
-.bg-cover {
-    background-size: cover; 
-}
 .bg-laputa {
-    background: mediumvioletred;
 }
 .bg-fireflies {
     
@@ -36,7 +37,6 @@
 .bg-yesterday {
 }
 .bg-spirit {
-    background: pink;
 }
 
 button {
@@ -74,11 +74,8 @@ button {
 /* F */
 
 /* fonts */
-.fpo {
-    font-family: 'Poiret One', sans-serif;
-}
-.fb {
-font-family: 'Bangers', cursive;
+.font {
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .fs-100px {
     font-size: 6.25rem; 
