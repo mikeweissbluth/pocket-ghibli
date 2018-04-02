@@ -8,6 +8,7 @@ $( document ).ready(function() {
 //FUNCTIONS
 function init() {
     $(".js-resetDiv").hide();
+    $(".js-pickaFlick").hide();
 }
 
 function hideMenu() {
@@ -27,70 +28,70 @@ function renderMovieRef() {
     let movieRefArray = [
         { name: "Laputa: Castle in the Sky",
         addbackground : "bg-laputa",
-    },
+        },
         { name: "Grave of the Fireflies",
         addbackground : "bg-fireflies", 
-    },
+        },
         { name: "My Neighbor Totoro",
         addbackground: "bg-totoro",
-    }, 
+        }, 
         { name: "Kiki's Delivery Service",
         addbackground: "bg-kiki",
-    }, 
+        }, 
         { name: "Only Yesterday", 
         addbackground: "bg-yesterday",
-    },
+        },
         { name: "Porco Rosso", 
         addbackground: "bg-rosso",
-    },
+        },
         { name: "Ocean Waves",
         addbackground: "bg-ocean", 
-    },
+        },
         { name: "Pom Poko",
         addbackground: "bg-poko",
-    }, 
+        }, 
         { name: "Whisper of the Heart", 
         addbackground: "bg-heart",
-    },
+        },
         { name: "Princess Mononoke",
         addbackground: "bg-mononoke",
-    }, 
+        }, 
         { name: "My Neighbors the Yamadas",
         addbackground: "bg-yamadas",
-    }, 
+        }, 
         { name:"Spirited Away",
         addbackground: "bg-spirit", 
-    },
+        },
         { name: "The Cat Returns", 
         addbackground: "bg-cat",
-    },
+        },
         { name: "Howl's Moving Castle",
         addbackground: "bg-castle", 
-    },
+        },
         { name: "Tales from Earthsea", 
         addbackground: "bg-earthsea",
-    },
+        },
         { name: "Ponyo", 
         addbackground: "bg-ponyo",
-    },
+        },
         { name: "Arrietty",
         addbackground: "bg-arrietty",
-    },
+        },
         { name: "From Up on Poppy Hill",
         addbackground: "bg-hill", 
-    },
+        },
         { name:"The Wind Rises",
         addbackground: "bg-wind", 
-    },
+        },
         { name:"The Tale of the Princess Kaguya",
         addbackground: "bg-princess", 
-    },
+        },
         { name:"When Marnie Was There", 
         addbackground: "bg-marnie",
-    },
+        },
         { name: "How Do You Live?",
         addbackground: "bg-live",
-    }
+        }
     ];
     $(".js-movie-ref-div").empty();
     for (let i = 0; i < movieRefArray.length; i++) {
@@ -133,6 +134,11 @@ function movieRefCall() {
 function mainMenu() {
     $(".js-mainMenuDiv").show();
     $(".js-resetDiv").hide();
+    $(".js-pickaFlick").hide();
+}
+
+function flickPicker() {
+    $(".js-pickaFlick").show();
 }
 
 
@@ -162,6 +168,7 @@ function mainMenu() {
     //Click of Movie Quiz
     $(document).on("click", ".js-movie-quiz-button", function() {
         hideMenu();
+        flickPicker();
         //Questions are Asked
         //Responses and their effects on the answers are generated.
         //Result or results are picked.
