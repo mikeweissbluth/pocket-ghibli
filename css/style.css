@@ -29,7 +29,7 @@
 
 }
 .bg-kiki {
-    
+
 }
 
 
@@ -309,6 +309,9 @@ font-family: 'Bangers', cursive;
     .mt-200px {
         margin-top: 200px;
     }
+    .mq-op-0 {
+        opacity: 0;
+    } 
     .pad-b {
         padding-bottom: 40px;
     }
