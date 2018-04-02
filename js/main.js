@@ -15,42 +15,13 @@ function hideMenu() {
     $(".js-resetDiv").show();
 }
 
-// function renderMovieRef() {
-//     let movieRefArray = [
-//         "Laputa: Castle in the Sky", 
-//         "Grave of the Fireflies,", 
-//         "My Neighbor Totoro", 
-//         "Kiki's Delivery Service", 
-//         "Only Yesterday", 
-//         "Porco Rosso", 
-//         "Ocean Waves", 
-//         "Pom Poko", 
-//         "Whisper of the Heart", 
-//         "Princess Mononoke", 
-//         "My Neighbors the Yamadas", 
-//         "Spirited Away", 
-//         "The Cat Returns", 
-//         "Howl's Moving Castle", 
-//         "Tales from Earthsea", 
-//         "Ponyo", "Arrietty", 
-//         "From Up on Poppy Hill", 
-//         "The Wind Rises", 
-//         "The Tale of the Princess Kaguya", 
-//         "When Marnie Was There", 
-//         "How Do You Live?"
-//     ];
-//     $(".js-movie-ref-div").empty();
-//     for (let i = 0; i < movieRefArray.length; i++) {
-//         var movieRefItem = $("<button>");
-//         movieRefItem.addClass("js-movieRef");
-//         movieRefItem.attr("data-name", movieRefArray[i]);
-//         movieRefItem.text(movieRefArray[i]);
-//         $(".js-movie-ref-div").append(movieRefItem);
-//     }
-// }
-
+//variables in order to be able to manipulate changing backgrounds
 let recentlyAddedClass = "";
 let recentlyEditedElement = "";
+
+//variables in order to be able to manipulate changing images
+let recentlyAddedImage = "";
+let recentlyEditedImage = "";
 
 function renderMovieRef() {
     let movieRefArray = [
@@ -89,6 +60,8 @@ function renderMovieRef() {
     }, 
         { name:"Spirited Away",
         addbackground: "bg-spirit", 
+        image: "../images/spirit-flowers.png",
+        character: ""
     },
         { name: "The Cat Returns", 
         addbackground: "bg-cat",
@@ -125,18 +98,27 @@ function renderMovieRef() {
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<button>");
         movieRefItem.addClass("js-movieRef");
-        movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground)
+        movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
+        movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);
         movieRefItem.attr("data-name", movieRefArray[i].name);
         movieRefItem.text(movieRefArray[i].name);
         $(".js-movie-ref-div").append(movieRefItem);
     }
 }
 
+//for backgrounds to show up 
 function addClass(classToAdd) {
     $("#background").addClass(classToAdd);
 }
 function removeClass(classToRemove) {
     $("#background").removeClass(classToRemove);
+}
+//for images to populate
+function addImage(imageToAdd) {
+    $("#images").prepend(imageToAdd);
+}
+function removeImage(imageToRemove) {
+    $("#images").remove(imageToRemove);
 }
 
 function movieRefCall() {
@@ -177,9 +159,17 @@ function mainMenu() {
         // console.log("data elem: ", $(this).data().classtoadd);
         //movieRefCall();
         $("#background").addClass(dataFromDom);
-        classToRemove(recentlyAddedClass);
+        //classToRemove(recentlyAddedClass); << What Steven had. Giving me an error in console?
+        removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
+
+        let imgFromDom = $(this).data().imagetoadd;
+
+        $("#images").prepend(dataFromDom);
+        removeImage(recentlyAddedImage);
+        recentlyAddedImage = imgFromDom;
+        recentlyEditedImage = $(this);
     }
 );
         //Calls up individual Movie Page

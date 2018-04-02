@@ -20,7 +20,7 @@
     background-size: cover; 
 }
 .bg-laputa {
-    
+    background: mediumvioletred;
 }
 .bg-fireflies {
     
@@ -30,6 +30,14 @@
 }
 .bg-kiki {
 
+}
+.bg-yesterday {
+}
+.bg-spirit {
+    background: pink;
+}
+.img-spirit {
+    background-image: url("../images/flowers.png")
 }
 
 
