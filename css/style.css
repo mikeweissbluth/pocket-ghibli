@@ -10,6 +10,9 @@
 .border-box {
     box-sizing: border-box;
 }
+.b-cover {
+    background-size: cover;
+}
 .box {
     height: 300px;
     width: 400px; 
@@ -20,10 +23,11 @@
 }
 .bg-initial {
     background: linear-gradient(141deg, #65c2e4, #4aa4c5, #b0eaff, #b0fff2);
-    animation: bg-initial 30s ease infinite; 
-    background-size: 800% 800%
+    background-size: 800% 800%;
 }
 .bg-laputa {
+    background-image: url("../images/bg-laputa.jpg");
+    background-size: auto;
 }
 .bg-fireflies {
     
@@ -264,11 +268,6 @@ button {
     50%      { bottom:5px; }
     100%     {bottom:0;}
   }
-@-webkit-keyframes bg-initial { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
 
 
 /* media queries */
