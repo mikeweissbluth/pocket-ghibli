@@ -13,8 +13,10 @@
 .bb-color {
     background-color: #d3d3d3
 }
-.bg-teal {
-    background: #57BAC6  
+.bg-initial {
+    background: linear-gradient(141deg, #65c2e4, #4aa4c5, #b0eaff, #b0fff2);
+    animation: bg-initial 30s ease infinite; 
+    background-size: 800% 800%
 }
 .bg-cover {
     background-size: cover; 
@@ -36,18 +38,16 @@
 .bg-spirit {
     background: pink;
 }
-.img-spirit {
-    background-image: url("../images/flowers.png")
-}
-
 
 button {
     border: solid 4px #323232  ;
-    height: 30%;
-    width: 50%;
+    height: 45px;
+    width: auto;
     border-radius: 70% 20% / 20% 10%;
     background-color: #FBFADC  ;
+    text-align: center;
   }
+
 
 /* C */
 
@@ -267,7 +267,11 @@ font-family: 'Bangers', cursive;
     50%      { bottom:5px; }
     100%     {bottom:0;}
   }
-
+@-webkit-keyframes bg-initial { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 
 /* media queries */
