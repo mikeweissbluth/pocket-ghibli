@@ -30,7 +30,8 @@
     background-size: auto;
 }
 .bg-fireflies {
-    
+    background-image: url("../images/bg-fireflies.jpg");
+    background-size: auto;
 }
 .bg-totoro {
 
