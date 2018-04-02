@@ -115,7 +115,7 @@ function removeClass(classToRemove) {
 }
 //for images to populate
 function addImage(imageToAdd) {
-    $("#images").prepend(imageToAdd);
+    $("#images").prepend("<img src=" + imageToAdd + "/>");
 }
 function removeImage(imageToRemove) {
     $("#images").remove(imageToRemove);
@@ -166,7 +166,7 @@ function mainMenu() {
 
         let imgFromDom = $(this).data().imagetoadd;
 
-        $("#images").prepend(dataFromDom);
+        $("#images").prepend(imgFromDom);
         removeImage(recentlyAddedImage);
         recentlyAddedImage = imgFromDom;
         recentlyEditedImage = $(this);
