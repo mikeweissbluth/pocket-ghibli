@@ -23,7 +23,8 @@
 }
 .bg-initial {
     background: linear-gradient(141deg, #65c2e4, #4aa4c5, #b0eaff, #b0fff2);
-    background-size: 800% 800%;
+    background-size: 800%, 800%;
+    animation: bg-initial 5s ease infinite;
 }
 .bg-laputa {
     background-image: url("../images/bg-laputa.jpg");
@@ -106,6 +107,12 @@ button {
 /* footer */
 .foot {
     height: 50px;
+}
+
+/* H */
+
+.height100vh {
+    height: 100vh; 
 }
 
 /* I */
@@ -241,6 +248,9 @@ button {
 .w-100per {
     width: 100%;
 }
+.width-100vw {
+    width: 100vw;
+}
 
 /* Z */
 
@@ -269,6 +279,11 @@ button {
     50%      { bottom:5px; }
     100%     {bottom:0;}
   }
+  @keyframes bg-initial { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 
 /* media queries */

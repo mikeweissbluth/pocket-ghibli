@@ -16,13 +16,15 @@
     <!-- link to javascript link -->
     <script src="./js/main.js"></script>   
 </head>
-<body id="background" class="bg-initial font">
+<body>
+    <div id="background class="font">
+    <div class="bg-initial pos-f">
     <!-- Initial State -->
     <!-- js-mainMenuDiv will get hidden after clicked on in js file -->
     <div class="js-mainMenuDiv"> 
         <!-- cloud -->
         <img src="./images/cloud.png" class="pos-a" height="640" width="994"/> 
-        <div class="d-f center mt-100px pos-r z-index-2">
+        <div class="d-f center mt-100px pos-a z-index-2 width-100vw">
             <img src="./images/kodama.png" class="bounce-1sec" height="150px" width="200px"/>
             <button class="js-movie-button">Reference</button>
             <img src="./images/teto.png" class="bounce-1sec" height="175px" width="200.5px"/>
@@ -40,10 +42,10 @@
         <!-- to populate specific movie images -->
         <div id="images"></div>
 
-        <div class="js-movie-ref-div">
+        <div class="js-movie-ref-div height100vh">
             
         </div>
-        <div class="resetDiv">
+        <div class="resetDiv height100vh">
             <button class="js-resetDiv">Main Menu</button>
         </div>
     <!-- for pick a flick options -->
@@ -52,6 +54,11 @@
         <div class="d-f center mt-100px pos-r z-index-2"> 
             <div class="box b-w">Pick a Flick! This quiz will tell you what Ghibli film fits your mood!</div>
         </div>
+    </div>
+
+    <!-- end of background div -->
+    </div>
+    <!-- end of wrapper div -->
     </div>
 
 
