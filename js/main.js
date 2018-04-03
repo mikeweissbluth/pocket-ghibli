@@ -6,10 +6,6 @@ $( document ).ready(function() {
 
 
 //FUNCTIONS
-function init() {
-    $(".js-resetDiv").hide();
-    $(".js-pickaFlick").hide();
-}
 
 function hideMenu() {
     $(".js-mainMenuDiv").hide();
@@ -93,6 +89,7 @@ function renderMovieRef() {
         addbackground: "bg-live",
         }
     ];
+    $(".js-movie-ref-div").show();
     $(".js-movie-ref-div").empty();
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<button>");
@@ -133,7 +130,7 @@ function mainMenu() {
     $(".js-mainMenuDiv").show();
     $(".js-resetDiv").hide();
     $(".js-pickaFlick").hide();
-    // $(".js-movie-ref-div").hide();
+    $(".js-movie-ref-div").hide();
     $(".js-movie-ref-text").empty();
 }
 
@@ -144,7 +141,7 @@ function flickPicker() {
 
 
 //EVENTS
-    init();
+    mainMenu();
     $(document).on("click", ".js-movie-button", function() {
         hideMenu();
         renderMovieRef();
@@ -154,16 +151,12 @@ function flickPicker() {
     $(document).on("click", ".js-movieRef", function() {
         let dataFromDom = $(this).data().classtoadd;
         // console.log("data elem: ", $(this).data().classtoadd);
-
         $("#background").addClass(dataFromDom);
         removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
     });
     $(document).on('click', '.js-movieRef', movieRefCall);
-        //Calls up individual Movie Page
-        //Calls Wikipedia API for Description of Movie
-        //Return to Main Menu Button
     //Click of Movie Quiz
     $(document).on("click", ".js-movie-quiz-button", function() {
         hideMenu();
@@ -172,7 +165,6 @@ function flickPicker() {
         //Responses and their effects on the answers are generated.
         //Result or results are picked.
         //Result page displays.
-        //Return to Main Menu Button
         console.log("js-movie-quiz button success");
     })
     //Click of Spirit Quiz
