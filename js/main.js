@@ -100,7 +100,6 @@ function renderMovieRef() {
         movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
         movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);
         movieRefItem.attr("data-name", movieRefArray[i].name);
-        console.log("movieRefArray[i].name " + movieRefArray[i].name);
         movieRefItem.text(movieRefArray[i].name);
         $(".js-movie-ref-div").append(movieRefItem);
     }
@@ -116,10 +115,7 @@ function removeClass(classToRemove) {
 
 function movieRefCall() {
     let movieName = "&query=" + $(this).attr("data-name");
-    console.log("movie name: " + movieName);
-    let cssStyle = 
-    console.log(movieName);
-    console.log(this);
+    let cssStyle; 
     let apiKey = "?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
     let queryURL = "https://api.themoviedb.org/3/search/movie";
     let noPorn = "&include_adult=false"
@@ -129,7 +125,6 @@ function movieRefCall() {
 
     }).then(function(response){
         let result = response;
-        console.log(result.results[0].overview);
         $(".js-movie-ref-text").text(result.results[0].overview);
     })
 }
