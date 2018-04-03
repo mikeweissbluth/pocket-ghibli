@@ -188,6 +188,7 @@ function flickPicker() {
     //Return to Main Menu
     $(document).on("click", ".js-resetDiv", function() {
         mainMenu();
+        removeClass(recentlyAddedClass);
     })
 
 }); // Closing of Document Ready
