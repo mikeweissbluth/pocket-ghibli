@@ -17,37 +17,53 @@
     <script src="./js/main.js"></script>   
 </head>
 <body>
-    <div id="background class="font">
-    <div class="bg-initial pos-f">
-    <!-- Initial State -->
-    <!-- js-mainMenuDiv will get hidden after clicked on in js file -->
-    <div class="js-mainMenuDiv"> 
-        <!-- cloud -->
-        <img src="./images/cloud.png" class="pos-a" height="640" width="994"/> 
-        <div class="d-f center mt-100px pos-a z-index-2 width-100vw">
-            <img src="./images/kodama.png" class="bounce-1sec" height="150px" width="200px"/>
-            <button class="js-movie-button">Reference</button>
-            <img src="./images/teto.png" class="bounce-1sec" height="175px" width="200.5px"/>
-            <button class="js-movie-quiz-button">Pick a Flick!</button>
-            <img src="./images/totoro.png" class="bounce-1sec" height="200px" width="117px"/>
-            <button class="js-spirit-quiz-button">Get Spirited!</button>
-        </div>
+    <div id=""background class="font">
+        <div class="bg-initial pos-f">
+            <!-- Initial State -->
+            <!-- js-mainMenuDiv will get hidden after clicked on in js file -->
+            <div class="js-mainMenuDiv"> 
+                <!-- cloud -->
+                <img src="./images/cloud.png" class="pos-a" height="640" width="994"/> 
+                <div class="d-f center mt-100px pos-a z-index-2 width-100vw">
+                    <img src="./images/kodama.png" class="bounce-1sec" height="150px" width="200px"/>
+                    <button class="js-movie-button">Reference</button>
+                    <img src="./images/teto.png" class="bounce-1sec" height="175px" width="200.5px"/>
+                    <button class="js-movie-quiz-button">Pick a Flick!</button>
+                    <img src="./images/totoro.png" class="bounce-1sec" height="200px" width="117px"/>
+                    <button class="js-spirit-quiz-button">Get Spirited!</button>
+                </div>
     
-        <!-- cloud -->
-        <div>
-            <img src="./images/cloud.png" class="pos-r z-index-1"/>
-        </div>
-    <!-- end of main menu-->
-    </div>
-        <!-- to populate specific movie images -->
-        <div id="images"></div>
+                <!-- cloud -->
+                <div>
+                    <img src="./images/cloud.png" class="pos-r z-index-1"/>
+                </div>
+            <!-- end of main menu-->
+            </div>
+            <!-- to populate specific movie images -->
+            <div id="images"></div>
 
         <div class="js-movie-ref-div height90vh">
             
         </div>
         <div class="resetDiv">
         <div class="js-movie-ref-text">
+            <div class="js-movie-ref-div height100vh"></div>
+            <div class="resetDiv height100vh"></div>
+            <div class="js-movie-ref-text"></div>
+            <div class="resetDiv">
+                <button class="js-resetDiv">Main Menu</button>
+            </div>
+            <!-- for pick a flick options -->
+            <!-- can make this entire div hide / appear as needed with the js-pickaFlick class -->
+            <div class="js-pickaFlick">
+                <div class="d-f center mt-100px pos-r z-index-2"> 
+                    <div class="box b-w">Pick a Flick! This quiz will tell you what Ghibli film fits your mood!</div>
+                </div>
+            </div>
+            <div class="js-spiritQuiz"></div>
+            <div class="js-spiritResult"></div>
 
+            <!-- end of background div -->
         </div>
         <div class="resetDiv">
             <button class="js-resetDiv height10vh">Main Menu</button>
@@ -61,16 +77,7 @@
     </div>
     <div class="js-spiritQuiz">
 
+        <!-- end of wrapper div -->
     </div>
-    <div class="js-spiritResult">
-
-    </div>
-
-    <!-- end of background div -->
-    </div>
-    <!-- end of wrapper div -->
-    </div>
-
-
 </body>
 </html>
