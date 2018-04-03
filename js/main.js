@@ -133,7 +133,7 @@ function mainMenu() {
     $(".js-mainMenuDiv").show();
     $(".js-resetDiv").hide();
     $(".js-pickaFlick").hide();
-    $(".js-movie-ref-div").hide();
+    // $(".js-movie-ref-div").hide();
     $(".js-movie-ref-text").empty();
 }
 
