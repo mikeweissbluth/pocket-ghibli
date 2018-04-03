@@ -34,14 +34,77 @@
     background-size: auto;
 }
 .bg-totoro {
-
+    background-image: url("../images/bg-totoro");
+    background-size: auto;
 }
 .bg-kiki {
-
+    background-image: url("../images/bg-kikisDeliveryService");
+    background-size: auto;
 }
 .bg-yesterday {
+    background-image: url("../images/bg-onlyyesterdaybdcap4_original.jpg");
+    background-size: auto;
+}
+.bg-ross {
+    background-image: url("../images/bg-porco_rosso.jpg");
+    background-size: auto;
+}
+.bg-ocean {
+    background-image: url("../images/bg-oceanWaves.png");
+    background-size: auto;
+}
+.bg-mononoke {
+    background-image: url("../images/bg-princess-mononoke.jpg");
+    background-size: auto;
+}
+.bg-yamadas {
+    background-image: url("../images/bg-myNeighborstheYamadas.jpg");
+    background-size: auto;
 }
 .bg-spirit {
+    background-image: url
+    ("../images/bg-spiritedAway.jpg");
+    background-size: auto;
+}
+.bg-cat {
+    background-image: url("../images/bg-theCatReturns.jpg");
+    background-size: auto;
+}
+.bg-castle {
+    background-image: url("../images/bg-howl-and-sophie-howls-moving-castle-31710509-2120-1200.png");
+    background-size: auto;
+}
+.bg-earthsea {
+    background-image: url("../images/bg-talesfromEarthsea.jpg");
+    background-size: auto;
+}
+.bg-ponyo {
+    background-image: url("../images/bg-ponyo.jpg");
+    background-size: auto;
+}
+.bg-arrietty {
+    background-image: url("../images/bg-arrietty.jpg");
+    background-size: auto;
+}
+.bg-hill {
+    background-image: url("../images/bg-fromUponPoppyHill.jpg");
+    background-size: auto;
+}
+.bg-wind {
+    background-image: url("../images/bg-theWindRises.jpg");
+    background-size: auto;
+}
+.bg-princess {
+    background-image: url("../images/bg-theTaleofthePrincessKaguya.jpg");
+    background-size: auto;
+}
+.bg-marnie {
+    background-image: url("../images/bg-whenMarnieWasThere.png");
+    background-size: auto;
+}
+.bg-live {
+    background-image: url("../images/bg-howDoYouLive?.jpeg");
+    background-size: auto;
 }
 
 button {
