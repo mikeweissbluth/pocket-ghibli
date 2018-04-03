@@ -115,9 +115,7 @@ function removeClass(classToRemove) {
 
 function movieRefCall() {
     let movieName = "&query=" + $(this).attr("data-name");
-    let cssStyle = 
-    console.log(movieName);
-    console.log(this);
+    let cssStyle; 
     let apiKey = "?api_key=5cd1ecff8ea6adcee13ecffc24c20aa2";
     let queryURL = "https://api.themoviedb.org/3/search/movie";
     let noPorn = "&include_adult=false"
@@ -127,7 +125,7 @@ function movieRefCall() {
 
     }).then(function(response){
         let result = response;
-        console.log(result.results[0].overview);
+        $(".js-movie-ref-text").text(result.results[0].overview);
     })
 }
 
@@ -135,6 +133,8 @@ function mainMenu() {
     $(".js-mainMenuDiv").show();
     $(".js-resetDiv").hide();
     $(".js-pickaFlick").hide();
+    // $(".js-movie-ref-div").hide();
+    $(".js-movie-ref-text").empty();
 }
 
 function flickPicker() {
@@ -154,14 +154,13 @@ function flickPicker() {
     $(document).on("click", ".js-movieRef", function() {
         let dataFromDom = $(this).data().classtoadd;
         // console.log("data elem: ", $(this).data().classtoadd);
-        //movieRefCall();
+
         $("#background").addClass(dataFromDom);
         removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
-
-    }
-);
+    });
+    $(document).on('click', '.js-movieRef', movieRefCall);
         //Calls up individual Movie Page
         //Calls Wikipedia API for Description of Movie
         //Return to Main Menu Button
@@ -189,6 +188,7 @@ function flickPicker() {
     //Return to Main Menu
     $(document).on("click", ".js-resetDiv", function() {
         mainMenu();
+        removeClass(recentlyAddedClass);
     })
 
 }); // Closing of Document Ready
