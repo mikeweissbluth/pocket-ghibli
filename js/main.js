@@ -100,6 +100,7 @@ function renderMovieRef() {
         movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
         movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);
         movieRefItem.attr("data-name", movieRefArray[i].name);
+        console.log("movieRefArray[i].name " + movieRefArray[i].name);
         movieRefItem.text(movieRefArray[i].name);
         $(".js-movie-ref-div").append(movieRefItem);
     }
@@ -115,6 +116,7 @@ function removeClass(classToRemove) {
 
 function movieRefCall() {
     let movieName = "&query=" + $(this).attr("data-name");
+    console.log("movie name: " + movieName);
     let cssStyle = 
     console.log(movieName);
     console.log(this);
@@ -128,6 +130,7 @@ function movieRefCall() {
     }).then(function(response){
         let result = response;
         console.log(result.results[0].overview);
+        $(".js-movie-ref-text").text(result.results[0].overview);
     })
 }
 
@@ -154,14 +157,13 @@ function flickPicker() {
     $(document).on("click", ".js-movieRef", function() {
         let dataFromDom = $(this).data().classtoadd;
         // console.log("data elem: ", $(this).data().classtoadd);
-        //movieRefCall();
+
         $("#background").addClass(dataFromDom);
         removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
-
-    }
-);
+    });
+    $(document).on('click', '.js-movieRef', movieRefCall);
         //Calls up individual Movie Page
         //Calls Wikipedia API for Description of Movie
         //Return to Main Menu Button
