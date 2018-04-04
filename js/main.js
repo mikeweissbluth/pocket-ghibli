@@ -143,7 +143,7 @@ function spiritPIcker() {
     let spiritArray = [
         {
             name: "deer",
-            score: 0.
+            score: 0,
         },
         {
             name: "spirit",
