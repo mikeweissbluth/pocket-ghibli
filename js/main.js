@@ -138,6 +138,32 @@ function flickPicker() {
     $(".js-pickaFlick").show();
 }
 
+function spiritPIcker() {
+    $(".js-spiritQuiz").show();
+    let spiritArray = [
+        {
+            name: "deer",
+            score: 0.
+        },
+        {
+            name: "spirit",
+            score: 0,
+        },
+        {
+            name: "god",
+            score: 0,
+        },
+        {
+            name: "cat",
+            score: 0,
+        },
+        {
+            name: "totoro",
+            score: 0,
+        },
+    ]
+}
+
 
 
 //EVENTS
