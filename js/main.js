@@ -92,7 +92,9 @@ function renderMovieRef() {
     $(".js-movie-ref-div").show();
     $(".js-movie-ref-div").empty();
     for (let i = 0; i < movieRefArray.length; i++) {
-        var movieRefItem = $("<button>");
+        var movieRefItem = $("<div>");
+        movieRefItem.addClass("flex-auto");
+        movieRefItem.addClass("button-main");
         movieRefItem.addClass("js-movieRef");
         movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
         movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);

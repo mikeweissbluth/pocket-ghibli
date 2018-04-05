@@ -24,7 +24,7 @@
 .bg-initial {
     background: linear-gradient(141deg, #65c2e4, #4aa4c5, #b0eaff, #b0fff2);
     background-size: 800%, 800%;
-    animation: bg-initial 5s ease infinite;
+    animation: bg-initial 30s ease infinite;
 }
 .bg-laputa {
     background-image: url("../images/bg-laputa.jpg");
@@ -110,15 +110,6 @@
 
 button {
     border: solid 4px #323232  ;
-    height: 45px;
-    width: auto;
-    border-radius: 70% 20% / 20% 10%;
-    background-color: #FBFADC  ;
-    text-align: center;
-  }
-.button-main {
-    box-sizing: border-box;
-    border: solid 4px #323232  ;
     height: 8vh;
     width: auto;
     padding-top: 2vh;
@@ -126,8 +117,20 @@ button {
     padding-right: 1vw;
     padding-left: 1vw;
     border-radius: 70% 20% / 20% 10%;
+    background-color: #FBFADC;
+  }
+.button-main {
+    box-sizing: border-box;
+    border: solid 4px #323232  ;
+    height: 8vh;
+    width: auto; 
+    padding-top: 2vh;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 70% 20% / 20% 10%;
     background-color: #FBFADC  ;
-    text-align: center; 
+    /* text-align: center;  */
 }
 
 /* C */
@@ -150,6 +153,12 @@ button {
 /* flexbox */
 .d-f {
     display: flex;
+}
+.d-i {
+    display: inline;
+}
+.d-rtl {
+    direction: rtl;
 }
 
 /* F */
@@ -180,6 +189,15 @@ button {
 }
 .flex-nowrap {
     flex-wrap: nowrap;
+}
+.flex-auto {
+    flex: auto;
+}
+.flex-basis {
+    flex-basis: auto;
+}
+.flex-grow-1 {
+    flex-grow: 1;
 }
 
 /* footer */
@@ -278,7 +296,9 @@ button {
 .op-50 {
     opacity: 0.5;
 }
-
+.o-scroll {
+    overflow: scroll;
+}
 
 /* S */
 
