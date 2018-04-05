@@ -455,3 +455,22 @@ button {
     }
     
 }
+/* hey Mel, here I'm adding some css for spirit quiz- mike*/
+
+#app {
+	min-height: 100vh;
+
+	background: #BBC7CE;
+}
+
+#app > .row {
+	background: #fff;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+[v-cloak] {
+  display: none;
+}

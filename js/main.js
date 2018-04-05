@@ -134,37 +134,155 @@ function mainMenu() {
     $(".js-pickaFlick").hide();
     $(".js-movie-ref-div").hide();
     $(".js-movie-ref-text").empty();
+    $(".js-spiritQuiz").hide();
 }
 
 function flickPicker() {
     $(".js-pickaFlick").show();
 }
 
-function spiritPIcker() {
+//function spiritPicker() {
     $(".js-spiritQuiz").show();
-    let spiritArray = [
-        {
-            name: "deer",
-            score: 0,
+    var quiz = {
+        title: 'Hey Ghibliean! Let’s see which Ghibli creature you are',
+
+        questions: [{
+                text: "Do you like to be friends with princesses?",
+                responses: [{
+                        text: 'Well, in fact, I AM A Princess!',
+                        value: 'deer' 
+                    },
+                    {
+                        text: 'I.. I mean my neice loves princesses',
+                        value: 'spirit'
+                    },
+                    {
+                        text: 'I can take them or leave them',
+                        value: 'totoro'
+                    }
+                ]
+            },
+            {
+                text: "Do you guide adventurers?",
+                responses: [{
+                        text: 'life is a journey, not a destination',
+                        value: 'god'
+                    },
+                    {
+                        text: 'If they do not mind getting lost',
+                        value: 'cat'
+                    },
+                    {
+                        text: 'Oh yes, in my previous life I graduated top of my class in ranger school',
+                        value: 'deer'
+                    }
+                ]
+            },
+            {
+                text: "Who would you most hang around with?",
+                responses: [{
+                        text: 'an ambivalent garden troll',
+                        value: 'cat'
+                    },
+                    {
+                        text: 'happy go lucky toddler',
+                        value: 'totoro'
+                    },
+                    {
+                        text: 'i hang around with everyone',
+                        value: 'god'
+                    }
+                ]
+            },
+            {
+                text: "Do you prefer Companion or Guide?",
+                responses: [{
+                        text: 'UFOs will pick me up on June 18th 2021.',
+                        value: 'spirit'
+                    },
+                    {
+                        text: 'companion',
+                        value: 'cat'
+                    },
+                    {
+                        text: 'Guide',
+                        value: 'deer'
+                    }
+                ]
+            },
+            {
+                text: "When do you help people?",
+                responses: [{
+                        text: 'Every chance I can',
+                        value: 'cat'
+                    },
+                    {
+                        text: 'At night',
+                        value: 'god'
+                    },
+                    {
+                        text: 'When they need me to',
+                        value: 'spirit'
+                    }
+                ]
+            },
+            {
+                text: "Do you like a kitsunerisu (cute little fox-squirrels)?",
+                responses: [{
+                        text: 'wtf is a foxsquirrel?',
+                        value: 'totoro'
+                    },
+                    {
+                        text: 'LOVE them. They aresoooooo cute!',
+                        value: 'deer'
+                    },
+                    {
+                        text: 'not really. I have allergies.',
+                        value: 'god'
+                    }
+                ]
+            },
+        ]
+    };
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            quiz: quiz,
+            questionIndex: 0,
+            userResponses: Array()
         },
-        {
-            name: "spirit",
-            score: 0,
-        },
-        {
-            name: "god",
-            score: 0,
-        },
-        {
-            name: "cat",
-            score: 0,
-        },
-        {
-            name: "totoro",
-            score: 0,
-        },
-    ]
-}
+        methods: {
+            // Go to next question
+            next: function() {
+                this.questionIndex++;
+                console.log(this.userResponses);
+            },
+            // Go to previous question
+            prev: function() {
+                this.questionIndex--;
+            },
+            score: function() {
+                //find the highest occurence in responses
+                var modeMap = {};
+                var maxEl = this.userResponses[0],
+                    maxCount = 1;
+                for (var i = 0; i < this.userResponses.length; i++) {
+                    var el = this.userResponses[i];
+                    if (modeMap[el] == null)
+                        modeMap[el] = 1;
+                    else
+                        modeMap[el]++;
+                    if (modeMap[el] > maxCount) {
+                        maxEl = el;
+                        maxCount = modeMap[el];
+                    }
+                }
+                return maxEl;
+            }
+        }
+    });
+//}
 
 
 
@@ -198,6 +316,7 @@ function spiritPIcker() {
     //Click of Spirit Quiz
     $(document).on("click", ".js-spirit-quiz-button", function() {
         hideMenu();
+        //spiritPicker();
         //Questions are Asked
         //Responses and their effects on the answers are generated.
         //Result or results are picked.
