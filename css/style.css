@@ -116,7 +116,19 @@ button {
     background-color: #FBFADC  ;
     text-align: center;
   }
-
+.button-main {
+    box-sizing: border-box;
+    border: solid 4px #323232  ;
+    height: 8vh;
+    width: auto;
+    padding-top: 2vh;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 70% 20% / 20% 10%;
+    background-color: #FBFADC  ;
+    text-align: center; 
+}
 
 /* C */
 
@@ -166,6 +178,9 @@ button {
 .flex-end {
     justify-content: flex-end;
 }
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
 
 /* footer */
 .foot {
@@ -177,8 +192,8 @@ button {
 .height100vh {
     height: 100vh; 
 }
-.height90vh {
-    height: 90vh;
+.height80vh {
+    height: 80vh;
 }
 .height10vh {
     height: 10vh; 
