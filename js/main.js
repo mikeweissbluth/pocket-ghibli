@@ -1,17 +1,6 @@
 $( document ).ready(function() {
 //VARIABLES
 
-
-
-
-
-//FUNCTIONS
-
-function hideMenu() {
-    $(".js-mainMenuDiv").hide();
-    $(".js-resetDiv").show();
-}
-
 //variables in order to be able to manipulate changing backgrounds
 let recentlyAddedClass = "";
 let recentlyEditedElement = "";
@@ -19,6 +8,13 @@ let recentlyEditedElement = "";
 //variables in order to be able to manipulate changing images
 let recentlyAddedImage = "";
 let recentlyEditedImage = "";
+
+//FUNCTIONS
+
+function hideMenu() {
+    $(".js-mainMenuDiv").hide();
+    $(".js-resetDiv").show();
+}
 
 function renderMovieRef() {
     let movieRefArray = [
@@ -91,6 +87,8 @@ function renderMovieRef() {
     ];
     $(".js-movie-ref-div").show();
     $(".js-movie-ref-div").empty();
+    $(".js-box-ref").show();
+    $(".js-ref").show();
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<div>");
         movieRefItem.addClass("flex-auto");
@@ -135,14 +133,24 @@ function mainMenu() {
     $(".js-movie-ref-div").hide();
     $(".js-movie-ref-text").empty();
     $(".js-spiritQuiz").hide();
+    $(".js-ref").hide();
+    $(".js-flick").hide();
+    $(".js-spirit").hide();
+    $(".js-box-ref").hide();
+    $(".js-box-flick").hide();
+    $(".js-box-spirit").hide();
 }
 
 function flickPicker() {
     $(".js-pickaFlick").show();
+    $(".js-box-flick").show();
+    $(".js-flick").show();
 }
 
-//function spiritPicker() {
+function spiritPicker() {
     $(".js-spiritQuiz").show();
+    $(".js-box-spirit").show();
+    $(".js-spirit").show();
     var quiz = {
         title: 'Hey Ghibliean! Let’s see which Ghibli creature you are',
 
@@ -282,7 +290,7 @@ function flickPicker() {
             }
         }
     });
-//}
+}
 
 
 
@@ -316,7 +324,7 @@ function flickPicker() {
     //Click of Spirit Quiz
     $(document).on("click", ".js-spirit-quiz-button", function() {
         hideMenu();
-        //spiritPicker();
+        spiritPicker();
         //Questions are Asked
         //Responses and their effects on the answers are generated.
         //Result or results are picked.

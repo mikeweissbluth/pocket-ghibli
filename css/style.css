@@ -27,84 +27,91 @@
     animation: bg-initial 30s ease infinite;
 }
 .bg-laputa {
-    background-image: url("../images/bg-laputa.jpg");
+    background-image: url("../images/bglaputa.jpg");
     background-size: cover;
 }
 .bg-fireflies {
-    background-image: url("../images/bg-fireflies.jpg");
+    background-image: url("../images/bgfireflies.jpg");
     background-size: cover;
 }
 .bg-totoro {
-    background-image: url("../images/bg-totoro");
+    background-image: url("../images/bgtortoro.jpg");
     background-size: cover;
 }
 .bg-kiki {
-    background-image: url("../images/bg-kikisDeliveryService");
+    background-image: url("../images/bgkiki.jpg");
     background-size: cover;
 }
 .bg-yesterday {
-    background-image: url("../images/bg-onlyyesterdaybdcap4_original.jpg");
+    background-image: url("../images/bgyesterday.jpg");
     background-size: cover;
 }
-.bg-ross {
-    background-image: url("../images/bg-porco_rosso.jpg");
+.bg-rosso {
+    background-image: url("../images/bgrosso.jpg");
     background-size: cover;
 }
 .bg-ocean {
-    background-image: url("../images/bg-oceanWaves.png");
+    background-image: url("../images/bgocean.png");
+    background-size: cover;
+}
+.bg-poko {
+    background-image: url("../images/bgpoko.jpg");
+    background-size: cover;
+}
+.bg-heart {
+    background-image: url("../images/bgheart.jpg");
     background-size: cover;
 }
 .bg-mononoke {
-    background-image: url("../images/bg-princess-mononoke.jpg");
+    background-image: url("../images/bgmononoke.jpg");
     background-size: cover;
 }
 .bg-yamadas {
-    background-image: url("../images/bg-myNeighborstheYamadas.jpg");
+    background-image: url("../images/bgyamadas.jpg");
     background-size: cover;
 }
 .bg-spirit {
-    background-image: url
-    ("../images/bg-spiritedAway.jpg");
+    background-image: url("../images/bgspirit.jpg");
     background-size: cover;
 }
 .bg-cat {
-    background-image: url("../images/bg-theCatReturns.jpg");
+    background-image: url("../images/bgcat.jpg");
     background-size: cover;
 }
 .bg-castle {
-    background-image: url("../images/bg-howl-and-sophie-howls-moving-castle-31710509-2120-1200.png");
+    background-image: url("../images/bgcastle.png");
     background-size: cover;
 }
 .bg-earthsea {
-    background-image: url("../images/bg-talesfromEarthsea.jpg");
+    background-image: url("../images/bgearthsea.jpg");
     background-size: cover;
 }
 .bg-ponyo {
-    background-image: url("../images/bg-ponyo.jpg");
+    background-image: url("../images/bgponyo.jpg");
     background-size: cover;
 }
 .bg-arrietty {
-    background-image: url("../images/bg-arrietty.jpg");
+    background-image: url("../images/bgarrietty.jpg");
     background-size: cover;
 }
 .bg-hill {
-    background-image: url("../images/bg-fromUponPoppyHill.jpg");
+    background-image: url("../images/bghill.jpg");
     background-size: cover;
 }
 .bg-wind {
-    background-image: url("../images/bg-theWindRises.jpg");
+    background-image: url("../images/bgwind.jpg");
     background-size: cover;
 }
 .bg-princess {
-    background-image: url("../images/bg-theTaleofthePrincessKaguya.jpg");
+    background-image: url("../images/bgprincess.jpg");
     background-size: cover;
 }
 .bg-marnie {
-    background-image: url("../images/bg-whenMarnieWasThere.png");
+    background-image: url("../images/bgmarnie.png");
     background-size: cover;
 }
 .bg-live {
-    background-image: url("../images/bg-howDoYouLive.jpeg");
+    background-image: url("../images/bglive.jpeg");
     background-size: cover;
 }
 
@@ -210,6 +217,9 @@ button {
 .height100vh {
     height: 100vh; 
 }
+.height90vh {
+    height: 90vh;
+}
 .height80vh {
     height: 80vh;
 }
@@ -232,6 +242,9 @@ button {
 /* M */
 
 /* margin */
+.ma {
+    margin: auto;
+}
 .mt-20px {
     margin-top: 20px;
 }
@@ -251,7 +264,7 @@ button {
     margin-left: auto;
 }
 .mr-20px {
-    margin-right: 20 px;
+    margin-right: 20px;
 }
 .mr-a {
     margin-right: auto;
@@ -325,6 +338,12 @@ button {
 .t-a-c {
     text-align: center;
 }
+
+/* V */
+
+[v-cloak] {
+    display: none;
+  }
 
 /* W */
 
@@ -455,22 +474,4 @@ button {
     }
     
 }
-/* hey Mel, here I'm adding some css for spirit quiz- mike*/
 
-#app {
-	min-height: 100vh;
-
-	background: #BBC7CE;
-}
-
-#app > .row {
-	background: #fff;
-}
-
-h1 {
-	margin-bottom: 20px;
-}
-
-[v-cloak] {
-  display: none;
-}
