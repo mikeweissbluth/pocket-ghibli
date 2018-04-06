@@ -10,7 +10,6 @@ let recentlyEditedImage = "";
 
 //FUNCTIONS
 function renderMovieRef() {
-    window.location.href='./reference.html';
     let movieRefArray = [
         { name: "Laputa: Castle in the Sky",
         addbackground : "bg-laputa",
@@ -116,16 +115,11 @@ function movieRefCall() {
     })
 }
 
-function mainMenu() {
-    window.location.href = './index.html';
-}
-
 function flickPicker() {
-    window.location.href = './pickaflick.html';
+
 }
 
 function spiritPicker() {
-    window.location.href = './spiritquiz.html';
     var quiz = {
         title: 'Hey Ghibliean! Let’s see which Ghibli creature you are',
 
@@ -265,14 +259,14 @@ function spiritPicker() {
             }
         }
     });
+    console.log("spirit picker success");
 }
 
 
 
 //EVENTS
     $(document).on("click", ".js-movie-button", function() {
-        renderMovieRef();
-        console.log("js-movie button success");
+        window.location.href='./reference.html';
     })
     //Click of Movie in Movie References
     $(document).on("click", ".js-movieRef", function() {
@@ -286,20 +280,24 @@ function spiritPicker() {
     $(document).on('click', '.js-movieRef', movieRefCall);
     //Click of Movie Quiz
     $(document).on("click", ".js-movie-quiz-button", function() {
-        flickPicker();
-        //Questions are Asked
-        //Responses and their effects on the answers are generated.
-        //Result or results are picked.
-        //Result page displays.
-        console.log("js-movie-quiz button success");
+        window.location.href = './pickaflick.html';
     })
     //Click of Spirit Quiz
     $(document).on("click", ".js-spirit-quiz-button", function() {
-        spiritPicker();
-        console.log("js-spirit-quiz button success");
+        window.location.href = './spiritquiz.html';
     })
     //Return to Main Menu
     $(document).on("click", ".js-resetDiv", function() {
-        mainMenu();
         removeClass(recentlyAddedClass);
+        window.location.href = './index.html';
     })
+
+    if ($(".js-ref")) {
+        renderMovieRef();
+    }
+    if($(".js-flick")){
+        flickPicker();
+    }
+    if($(".js-spirit")) {
+        spiritPicker();
+    };
