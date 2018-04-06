@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pocket Ghibli</title>
+    <title>Pocket Ghibli - Main Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS Reset stylesheet link -->
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
@@ -13,11 +13,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     <!--    adding VueJS ref -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
     <!-- Jquery stylesheet hyper link + AJAX -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- link to javascript link -->
-    <script src="./js/main.js"></script>   
+ 
 </head>
 <body>
     <div class="bg-initial font">
@@ -42,98 +41,10 @@
                 </div>
                 <!-- end of main menu-->
             </div>
-
-            <!-- wrapping div for movie reference -->
-            <div class="js-ref">
-                <!-- js-movie div gets buttons populated — this is a scroll menu-->
-                <div class="height10vh d-f flex-nowrap o-scroll d-rtl"> 
-                    <div class="js-movie-ref-div d-f flex-basis"></div>
-                </div>
-                    <div class="height80vh">
-                        <!-- floating box behind description -->
-                        <div class="js-box-ref ma mt-20px box b-w pos-r z-index-1">
-                        <!-- the description populates -->
-                            <div class="js-movie-ref-text"></div>
-                        <!-- end of box div -->
-                        </div>
-                    </div>
-                        <!-- div of class=height80vh closes at the end FYI -->
-            <!-- closing div and end of movie reference-->
-            </div>
-
-            <!-- for pick a flick options -->
-            <!-- div to wrap -->
-            <div class="js-flick">
-            <!-- can make this entire div hide / appear as needed with the js-pickaFlick and js-box-flick class -->
-                <div class="js-box-flick ma mt-20px box b-w pos-r z-index-1"> 
-                    <div class="js-pickaFlick">Pick a Flick! This quiz will tell you what Ghibli film fits your mood!
-                    </div>
-                </div>
-            <!-- end of wrapping div -->
-            </div>
-
-            <!-- Spirit Quiz -->
-            <!-- wrapping div -->
-            <div class="js-spirit">
-                <!-- div to wrap spirit quiz and style box behind it -->
-                <div class="js-box-spirit ma mt-20px box b-w pos-r z-index-1">
-                    <div class="js-spiritQuiz">
-            
-                        <div v-cloak>
-                            <h1>{{ quiz.title }}</h1>
-                        <div class="callout">
-                            <div v-for="(question, index) in quiz.questions">
-                            <!-- Hide all questions, show only the one with index === to current question index -->
-                            <div v-show="index === questionIndex">
-                                <h3>{{ question.text }}</h3>
-                                    <ol>
-                                    <!-- for each response of the current question -->
-                                    <li v-for="response in question.responses">
-                                        <label>
-                                            <input type="radio"
-                                            v-bind:value="response.value"
-                                            v-bind:name="index"
-                                            v-model="userResponses[index]"> {{response.text}}
-                                        </label>
-                                    </li>
-                                    </ol>
-                              <!-- The two navigation buttons -->
-                              <!-- Note: prev is hidden on first question -->
-                              <button class="secondary button" v-if="questionIndex > 0" v-on:click="prev">
-                                prev
-                              </button>
-                              <button class="success button" v-on:click="next">
-                                next
-                              </button>
-                            </div>
-                            </div>
-                  
-                          <!-- Last page, quiz is finished, display result -->
-                          <div v-show="questionIndex === quiz.questions.length">
-                            <h3>Your Results</h3>
-                                <p>
-                                    You are: {{ score() }}
-                                </p>
-                          </div>
-                  
-                        </div>
-                        </div>
-                  
-                    </div>
-
-            <!-- end of div that hold box / background -->
-                </div>
-
-                <div class="js-spiritResult"></div>
-            <!-- end of wrapping div for spirit quiz -->
-            </div>
-            <!-- in order to get back to the main menu -->
-            <div class="resetDiv height10vh">
-                <button class="js-resetDiv">Main Menu</button>
-            </div>
             <!-- end of background div -->
         </div>
         <!-- end of wrapper div -->
     </div>
+    <script src="./js/main.js"></script>  
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pocket Ghibli - Pick a Flick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+</head>
+<body>
+    <div class="bg-initial font">
+        <div id="background">
+            <div class="js-flick">
+                <!-- can make this entire div hide / appear as needed with the js-pickaFlick and js-box-flick class -->
+                <div class="js-box-flick ma mt-20px box b-w pos-r z-index-1"> 
+                    <div class="js-pickaFlick">Pick a Flick! This quiz will tell you what Ghibli film fits your mood!
+                    </div>
+                </div>
+                <!-- end of wrapping div -->
+            </div>
+            <div class="resetDiv height10vh">
+                <button class="js-resetDiv">Main Menu</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

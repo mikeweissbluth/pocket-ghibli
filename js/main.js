@@ -1,4 +1,3 @@
-$( document ).ready(function() {
 //VARIABLES
 
 //variables in order to be able to manipulate changing backgrounds
@@ -10,13 +9,8 @@ let recentlyAddedImage = "";
 let recentlyEditedImage = "";
 
 //FUNCTIONS
-
-function hideMenu() {
-    $(".js-mainMenuDiv").hide();
-    $(".js-resetDiv").show();
-}
-
 function renderMovieRef() {
+    window.location.href='./reference.html';
     let movieRefArray = [
         { name: "Laputa: Castle in the Sky",
         addbackground : "bg-laputa",
@@ -85,10 +79,6 @@ function renderMovieRef() {
         addbackground: "bg-live",
         }
     ];
-    $(".js-movie-ref-div").show();
-    $(".js-movie-ref-div").empty();
-    $(".js-box-ref").show();
-    $(".js-ref").show();
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<div>");
         movieRefItem.addClass("flex-auto");
@@ -127,30 +117,15 @@ function movieRefCall() {
 }
 
 function mainMenu() {
-    $(".js-mainMenuDiv").show();
-    $(".js-resetDiv").hide();
-    $(".js-pickaFlick").hide();
-    $(".js-movie-ref-div").hide();
-    $(".js-movie-ref-text").empty();
-    $(".js-spiritQuiz").hide();
-    $(".js-ref").hide();
-    $(".js-flick").hide();
-    $(".js-spirit").hide();
-    $(".js-box-ref").hide();
-    $(".js-box-flick").hide();
-    $(".js-box-spirit").hide();
+    window.location.href = './index.html';
 }
 
 function flickPicker() {
-    $(".js-pickaFlick").show();
-    $(".js-box-flick").show();
-    $(".js-flick").show();
+    window.location.href = './pickaflick.html';
 }
 
 function spiritPicker() {
-    $(".js-spiritQuiz").show();
-    $(".js-box-spirit").show();
-    $(".js-spirit").show();
+    window.location.href = './spiritquiz.html';
     var quiz = {
         title: 'Hey Ghibliean! Let’s see which Ghibli creature you are',
 
@@ -295,9 +270,7 @@ function spiritPicker() {
 
 
 //EVENTS
-    mainMenu();
     $(document).on("click", ".js-movie-button", function() {
-        hideMenu();
         renderMovieRef();
         console.log("js-movie button success");
     })
@@ -313,7 +286,6 @@ function spiritPicker() {
     $(document).on('click', '.js-movieRef', movieRefCall);
     //Click of Movie Quiz
     $(document).on("click", ".js-movie-quiz-button", function() {
-        hideMenu();
         flickPicker();
         //Questions are Asked
         //Responses and their effects on the answers are generated.
@@ -323,13 +295,7 @@ function spiritPicker() {
     })
     //Click of Spirit Quiz
     $(document).on("click", ".js-spirit-quiz-button", function() {
-        hideMenu();
         spiritPicker();
-        //Questions are Asked
-        //Responses and their effects on the answers are generated.
-        //Result or results are picked.
-        //Result page displays.
-        //Return to Main Menu Button
         console.log("js-spirit-quiz button success");
     })
     //Return to Main Menu
@@ -337,8 +303,3 @@ function spiritPicker() {
         mainMenu();
         removeClass(recentlyAddedClass);
     })
-
-}); // Closing of Document Ready
-
-
-
