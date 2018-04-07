@@ -79,9 +79,9 @@ function renderMovieRef() {
         }
     ];
     for (let i = 0; i < movieRefArray.length; i++) {
-        var movieRefItem = $("<div>");
+        var movieRefItem = $("<button>");
         movieRefItem.addClass("flex-auto");
-        movieRefItem.addClass("button-main");
+        // movieRefItem.addClass("button-main");
         movieRefItem.addClass("js-movieRef");
         movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
         movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);
