@@ -305,6 +305,9 @@ button {
 .mt-100px {
     margin-top: 100px;
 }
+.mt-30vh {
+    margin-top: 30vh;
+}
 
 /* P */
 
@@ -347,6 +350,9 @@ button {
 }
 .o-scroll {
     overflow: scroll;
+}
+.overflow-n {
+    overflow-x: hidden;
 }
 
 /* S */
@@ -468,32 +474,42 @@ button {
 
 /* Media Queries */
 /* Desktop */
-@media screen and (min-width: 900px) {
-#hide-900 {
-    display: none;
+@media screen 
+and (min-width: 850px) {
+.hide-900 {
+    visibility: hidden;
+}
+.d-f-900 {
+    display: flex; 
 }
 
 }
 
 /* iPad */
-@media screen and (max-width: 768px) {
+@media screen 
+and (min-width: 500px)
+and (max-width: 768px) {
 .tac768 {
     text-align: center;
 }
-#hide-768 {
-    display: none;
+.hide-768 {
+    visibility: hidden;
 }
 
 }
 
 /* iPhone */
-@media screen and (max-width: 480px) {
+@media screen 
+and (min-width: 0px) 
+and (max-width: 480px){
 .background-media-480 {
+   /* background-size: cover;
+   color: white; */
+   background: white; 
    background-size: cover;
-   color: white;
 }
-#hide-480 {
-    display: none;
+.hide-480 {
+    visibility: hidden;
 }
 .button-480 {
     box-sizing: border-box;
