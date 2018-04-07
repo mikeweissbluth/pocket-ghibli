@@ -463,15 +463,52 @@ button {
 
 
 /* Media Queries */
+/* Desktop */
+@media screen and (min-width: 900px) {
+#hide-900 {
+    display: none;
+}
+
+}
 
 /* iPad */
 @media screen and (max-width: 768px) {
-
+.tac768 {
+    text-align: center;
+}
+#hide-768 {
+    display: none;
+}
 
 }
 
 /* iPhone */
 @media screen and (max-width: 480px) {
+.background-media-480 {
+   background-size: cover;
+   color: white;
+}
+#hide-480 {
+    display: none;
+}
+.button-480 {
+    box-sizing: border-box;
+    border: solid 4px #323232  ;
+    height: 20vh;
+    width: auto; 
+    padding-top: 2vh;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 70% 20% / 20% 10%;
+    background-color: #FBFADC  ;
+    text-align: center; 
+    font-size: 40px;
+    font-color: black; 
+}
+.d-i-480 {
+    display: inline;
+}
 
     
 }
