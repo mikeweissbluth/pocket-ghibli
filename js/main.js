@@ -186,7 +186,7 @@ function flickPicker() {
             {
                 text: "Mountain or Ocean?",
                 responses: [{
-                        text: 'Mountaints',
+                        text: 'Mountains',
                         value: ['Only Yesterday, Pom Poko, Princess Mononoke, The Wind Rises, The Tale of the Princess Kaguya']
                     },
                     {
@@ -352,7 +352,7 @@ function spiritPicker() {
                         value: 'deer' 
                     },
                     {
-                        text: 'I.. I mean my neice loves princesses',
+                        text: 'I.. I mean my niece loves princesses',
                         value: 'spirit'
                     },
                     {
