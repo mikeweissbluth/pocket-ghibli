@@ -513,7 +513,9 @@ function spiritPicker() {
         removeClass(recentlyAddedClass);
         window.location.href = './index.html';
     })
-
+    $(document).on("click", ".js-toggle", function() {
+        $(".js-box-ref").toggleClass("d-n")
+    })
     if ($(".js-ref")) {
         renderMovieRef();
     }
