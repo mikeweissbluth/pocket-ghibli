@@ -17,6 +17,8 @@
     height: 300px;
     width: 400px; 
     background-color: white;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 10px 10px 5px black;
 }
 .bb-color {
     background-color: #d3d3d3
@@ -228,7 +230,7 @@ button {
     box-sizing: border-box;
     border: solid 4px #323232  ;
     height: 20vh;
-    width: 20vh; 
+    width: 80vh; 
     padding-top: 2vh;
     padding-bottom: 1vw;
     padding-right: 1vw;
@@ -449,10 +451,6 @@ button {
         height: 400px;
         width: 500px;
     }
-    .image {
-        height: 200px;
-        width: 300px;
-    }
     .ml-40px {
         margin-left: 40px;
     }
@@ -463,54 +461,18 @@ button {
 
   }
 
+
+/* Media Queries */
+
+/* iPad */
 @media screen and (max-width: 768px) {
 
-    .fs-1 {
-        font-size: 1.8em;
-    }
+
 }
 
-@media screen and (max-width: 640px) {
+/* iPhone */
+@media screen and (max-width: 480px) {
 
-    .fs-30px {
-        font-size: 1.8em;
-    }
-    .fxd-c {
-        flex-direction: column;
-    }
-    .h-725px {
-        height: 725px;
-    }
-    .hide {
-        visibility: hidden;
-    }
-    .mb-20px {
-        margin-bottom: 20px;
-    }
-    .mt-200px {
-        margin-top: 200px;
-    }
-    .mq-op-0 {
-        opacity: 0;
-    } 
-    .pad-b {
-        padding-bottom: 40px;
-    }
-    .pad-t {
-        padding-top: 20px;
-    }
-    .pad-l {
-        padding-left: 150px;
-    }
-    .tac {
-        text-align: center;
-    }
-    .w-640px {
-        width: 640px;
-    }
-    .w-500px {
-        width: 500px;
-    }
     
 }
 
