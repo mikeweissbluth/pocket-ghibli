@@ -475,13 +475,17 @@ button {
 /* Media Queries */
 /* Desktop */
 @media screen 
-and (min-width: 850px) {
+and (min-width: 769px) {
 .hide-900 {
     visibility: hidden;
 }
 .d-f-900 {
     display: flex; 
 }
+.z-2-lg {
+    z-index: 2;
+}
+
 
 }
 
@@ -501,7 +505,7 @@ and (max-width: 768px) {
 /* iPhone */
 @media screen 
 and (min-width: 0px) 
-and (max-width: 480px){
+and (max-width: 499px){
 .background-media-480 {
    /* background-size: cover;
    color: white; */
@@ -529,7 +533,9 @@ and (max-width: 480px){
 .d-i-480 {
     display: inline;
 }
-
+.z-2-sm {
+    z-index: 2;
+}
     
 }
 
