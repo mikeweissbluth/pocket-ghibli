@@ -128,15 +128,17 @@
 }
 
 button {
+    box-sizing: border-box;
     border: solid 4px #323232  ;
     height: 8vh;
-    width: auto;
-    padding-top: 2vh;
+    width: auto; 
+    padding-top: 1vh;
     padding-bottom: 1vw;
     padding-right: 1vw;
     padding-left: 1vw;
     border-radius: 70% 20% / 20% 10%;
     background-color: #FBFADC;
+    white-space: nowrap;
   }
 .button-main {
     box-sizing: border-box;
@@ -148,9 +150,26 @@ button {
     padding-right: 1vw;
     padding-left: 1vw;
     border-radius: 70% 20% / 20% 10%;
-    background-color: #FBFADC  ;
+    background-color: #FBFADC;
     white-space: nowrap;
     /* text-align: center;  */
+}
+/* .button-main:target {
+    box-sizing: border-box;
+    border: solid 4px #323232  ;
+    height: 8vh;
+    width: auto; 
+    padding-top: 1vh;
+    padding-bottom: 1vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
+    border-radius: 70% 20% / 20% 10%;
+    background-color: #B9F6CA;
+    white-space: nowrap;
+    /* text-align: center;  */
+/* } */ 
+button:focus {
+    background-color: #B9F6CA;
 }
 
 /* C */
@@ -167,6 +186,7 @@ button {
 .color-FA6E90 {
     color: #FA6E90;
 }
+
 
 /* D */
 
@@ -475,13 +495,17 @@ button {
 /* Media Queries */
 /* Desktop */
 @media screen 
-and (min-width: 850px) {
+and (min-width: 769px) {
 .hide-900 {
     visibility: hidden;
 }
 .d-f-900 {
     display: flex; 
 }
+.z-2-lg {
+    z-index: 2;
+}
+
 
 }
 
@@ -501,7 +525,7 @@ and (max-width: 768px) {
 /* iPhone */
 @media screen 
 and (min-width: 0px) 
-and (max-width: 480px){
+and (max-width: 499px){
 .background-media-480 {
    /* background-size: cover;
    color: white; */
@@ -529,7 +553,9 @@ and (max-width: 480px){
 .d-i-480 {
     display: inline;
 }
-
+.z-2-sm {
+    z-index: 2;
+}
     
 }
 
