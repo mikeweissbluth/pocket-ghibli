@@ -116,6 +116,228 @@ function movieRefCall() {
 }
 
 function flickPicker() {
+    var quiz = {
+        title: 'Pick-a-Flick!',
+
+        questions: [{
+                text: "It’s raining cats and dogs, do you curl up with a hot cuppa and a good book or do you put on your wellies and stomp in the puddles?",
+                responses: [{
+                        text: 'stomp in puddles - all day!',
+                        value: ['Laputa: Castle in the Sky', 'My Neighbor Totoro', 'Kikis Delivery Service', 'Porco Rosso', 'Pom Poko', 'My Neighbors the Yamadas', 'Spirited Away', 'The Cat Returns', 'Ponyo']
+                    },
+                    {
+                        text: 'curl up with a cuppa',
+                        value: ['Grave_of_the_Fireflies', 'Only Yesterday', 'Ocean Waves', 'Princess Mononoke', 'Tales from Earthsea']
+                    },
+                    {
+                        text: 'squirrel!',
+                        value: ['Whisper of the Heart', 'Howls Moving Castle', 'Arrietty', 'From Up on Poppy Hill', 'The Wind Rises', 'The Tale of the Princess Kaguya', 'When Marnie Was There']
+                    }
+                ]
+            },
+            {
+                text: "Do you like bath houses?",
+                responses: [{
+                        text: 'Yes! Yes! Yes! They are the best!',
+                        value: ['Pom Poko', 'Princess Mononoke', 'Spirited Away']
+                    },
+                    {
+                        text: 'Are there lots of tentacles, or is this not that kind of japanime?',
+                        value: ['Laputa: Castle in the Sky', 'Grave_of_the_Fireflies', 'My Neighbor Totoro', 'Kikis Delivery Service', 'Only Yesterday', 'Porco Rosso', 'Ocean Waves', 'Whisper of the Heart', 'My Neighbors the Yamadas', 'Howls Moving Castle, Arrietty', 'From Up on Poppy Hill, The Tale of the Princess Kaguya']
+                    },
+                    {
+                        text: 'I can take em or leave em',
+                        value: ['The Cat Returns', 'Tales from Earthsea', 'Ponyo', 'The Wind Rises', 'When Marnie Was There,']
+                    }
+                ]
+            },
+            {
+                text: "Are you in the mood for a fantasy movie or movie that takes place in contemporary times?",
+                responses: [{
+                        text: 'Contemporary',
+                        value: ['Grave_of_the_Fireflies', 'My Neighbor Totoro', 'Kikis Delivery Service', 'Only Yesterday', 'Whisper of the Heart', 'My Neighbors the Yamadas', 'The Cat Returns', 'Arrietty', 'From Up on Poppy Hill', 'The Wind Rises', 'When Marnie Was There']
+                    },
+                    {
+                        text: 'like whateva?',
+                        value: ['Ocean Waves', 'Howls Moving Castle', 'Ponyo']
+                    },
+                    {
+                        text: 'fantasy',
+                        value: ['Laputa: Castle in the Sky', 'Porco Rosso', 'Pom Poko', 'Princess Mononoke', 'Spirited Away', 'Tales from Earthsea', 'The Tale of the Princess Kaguya',] 
+                    },
+                ]
+            },
+            {
+                text: "Do you prefer a carefree or heavy atmosphere?",
+                responses: [{
+                        text: 'carefree',
+                        value: ['Laputa: Castle in the Sky', 'My Neighbor Totoro', 'Pom Poko', 'Whisper of the Heart', 'My Neighbors the Yamadas', 'The Cat Returns, Arrietty']
+                    },
+                    {
+                        text: "I don't know",
+                        value: ['Kikis Delivery Service', 'Only Yesterday', 'Porco Rosso', 'Ocean Waves', 'Spirited Away', 'Howls Moving Castle', 'Ponyo', 'From Up on Poppy Hill', 'The Tale of the Princess Kaguya']
+                    },
+                    {
+                        text: 'heavy',
+                        value: ['Grave_of_the_Fireflies', 'Princess Mononoke', 'Tales from Earthsea', 'The Wind Rises', 'When Marnie Was There',]
+                    }
+                ]
+            },
+            {
+                text: "Mountain or Ocean?",
+                responses: [{
+                        text: 'Mountaints',
+                        value: ['Only Yesterday, Pom Poko, Princess Mononoke, The Wind Rises, The Tale of the Princess Kaguya']
+                    },
+                    {
+                        text: 'whateva',
+                        value: ['Laputa: Castle in the Sky', 'Grave_of_the_Fireflies', 'My Neighbor Totoro', 'Ocean Waves', 'Whisper of the Heart', 'The Cat Returns', 'Howls Moving Castle', 'Arrietty', 'When Marnie Was There']
+                    },
+                    {
+                        text: 'Oceans',
+                        value: ['Kikis Delivery Service', 'Porco Rosso', 'My Neighbors the Yamadas', 'Spirited Away', 'Tales from Earthsea', 'Ponyo', 'From Up on Poppy Hill']
+                    }
+                ]
+            },
+            {
+                text: "Do you like to wander?",
+                responses: [{
+                        text: 'Every chance I can',
+                        value: ['Laputa: Castle in the Sky', 'Grave_of_the_Fireflies', 'My Neighbor Totoro', 'Kikis Delivery Service', 'Whisper of the Heart', 'Princess Mononoke', 'My Neighbors the Yamadas', 'Spirited Away', 'Tales from Earthsea', 'The Tale of the Princess Kaguya']
+                    },
+                    {
+                        text: 'Oh sure! I got lost in the mall last Saturday.',
+                        value: ['Only Yesterday', 'Porco Rosso', 'The Cat Returns', 'Howls Moving Castle', 'From Up on Poppy Hill', 'The Wind Rises', ]
+                    },
+                    {
+                        text: 'No, I suffer from agrophobia',
+                        value: ['Ocean Waves', 'Pom Poko', 'Ponyo', 'Arrietty', 'When Marnie Was There']
+                    }
+                ]
+            },
+            {
+                text: "Do you worry about future conflicts?",
+                responses: [{
+                        text: 'Every chance I can',
+                        value: ['Grave_of_the_Fireflies', 'Princess Mononoke', 'Tales from Earthsea', 'Ponyo', 'From Up on Poppy Hill,']
+                    },
+                    {
+                        text: 'wha?',
+                        value: ['Laputa: Castle in the Sky', 'Kikis Delivery Service', 'Only Yesterday', 'Ocean Waves', 'Pom Poko', 'Whisper of the Heart', 'My Neighbors the Yamadas', 'The Cat Returns', 'Howls Moving Castle', 'Arrietty', 'The Wind Rises', 'When Marnie Was There,']
+                    },
+                    {
+                        text: 'Do you mean, like, if Kim leaves Kanye?',
+                        value: ['My Neighbor Totoro', 'Porco Rosso', 'Spirited Away', 'The Tale of the Princess Kaguya']
+                    }
+                ]
+            },
+            {
+                text: "Are you concerned about the state of our environment?",
+                responses: [{
+                        text: 'Every chance I can',
+                        value: ['Grave_of_the_Fireflies', 'Princess Mononoke', 'Ponyo, ']
+                    },
+                    {
+                        text: 'Trump says its a Chinese hoax. so...',
+                        value: ['Laputa: Castle in the Sky', 'My Neighbor Totoro', 'Kikis Delivery Service', 'Only Yesterday', 'Ocean Waves', 'Pom Poko', 'Whisper of the Heart', 'My Neighbors the Yamadas', 'The Cat Returns', 'Howls Moving Castle', 'Tales from Earthsea', 'Arrietty', 'From Up on Poppy Hill', 'The Wind Rises', 'When Marnie Was There']
+                    },
+                    {
+                        text: 'No, a superbug born from the Florida sewage will wipe us out before Hale-Bop returns.',
+                        value: ['Porco Rosso', 'Spirited Away', 'The Tale of the Princess Kaguya']
+                    }
+                ]
+            },
+            {
+                text: "Do you like bright or muted colors?",
+                responses: [{
+                        text: 'yes',
+                        value: ["My Neighbor Totoro", "Kiki's Delivery Service", "Princess Mononoke", "Spirited Away", "Tales from Earthsea", "Ponyo", "Arrietty", "The Wind Rises", "When Marnie Was There"]
+                    },
+                    {
+                        text: "I'm Blue da ba dee dabba die",
+                        value: ["Kiki's Delivery Service", "Only Yesterday", "Porco Rosso", "Ocean Waves", "The Cat Returns", "Howl's Moving Castle", "From Up on Poppy Hill"]
+                    },
+                    {
+                        text: 'No',
+                        value: ["Laputa: Castle in the Sky", "Grave_of_the_Fireflies", "Pom Poko", "Whisper of the Heart", "My Neighbors the Yamadas", "The Tale of the Princess Kaguya"]
+                    }
+                ]
+            },
+            {
+                text: "What mood do you prefer, light atmosphere or heavy atmo?",
+                responses: [{
+                        text: 'light',
+                        value: ["Laputa: Castle in the Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Pom Poko", "Whisper of the Heart", "My Neighbors the Yamadas", "The Cat Returns", "Ponyo", "Arrietty", "The Tale of the Princess Kaguya", "When Marnie Was There"]
+                    },
+                    {
+                        text: 'aint no thang but a chicken wang',
+                        value: ["Only Yesterday", "Ocean Waves", "Howl's Moving Castle", "From Up on Poppy Hill"]
+                    },
+                    {
+                        text: "Heavy, I'm already miserable",
+                        value: ["Grave_of_the_Fireflies", "Princess Mononoke", "Spirited Away", "Tales from Earthsea", "The Wind Rise"]
+                    }
+                ]
+            },
+            {
+                text: "Do you like airships?",
+                responses: [{
+                        text: "always- especially dirigibles.",
+                        value: ["Laputa: Castle in the Sky", "Grave_of_the_Fireflies", "My Neighbor Totoro", "Kiki's Delivery Service", "Whisper of the Heart", "Princess Mononoke", "My Neighbors the Yamadas", "Spirited Away", "Tales from Earthsea", "The Tale of the Princess Kaguya,"]
+                    },
+                    {
+                        text: "I can take it or leave it",
+                        value: ["Only Yesterday", "Ocean Waves", "Pom Poko", "Princess Mononoke", "Spirited Away", "Tales from Earthsea"]
+                    },
+                    {
+                        text: "I prefer to keep my feet firmly planted on the ground.",
+                        value: ["My Neighbor Totoro", "Grave_of_the_Fireflies", "Whisper of the Heart", "The Cat Returns", "Howl's Moving Castle", "Ponyo", "Arrietty", "From Up on Poppy Hill", "The Tale of the Princess Kaguya", "When Marnie Was There"]
+                    }
+                ]
+            }]
+    };
+
+
+    var app = new Vue({
+        el: '#app2',
+        data: {
+            quiz: quiz,
+            questionIndex: 0,
+            userResponses: Array()
+        },
+        methods: {
+            // Go to next question
+            next: function() {
+                this.questionIndex++;
+                console.log(this.userResponses);
+            },
+            // Go to previous question
+            prev: function() {
+                this.questionIndex--;
+            },
+            score: function() {
+                //find the highest occurence in responses
+                var modeMap = {};
+                var maxEl = this.userResponses[0];
+                var maxCount = 1;
+                for (var i = 0; i < this.userResponses.length; i++) {
+                    var arr = this.userResponses[i];
+                    arr.forEach(el => {
+                        if (modeMap[el] == null)
+                            modeMap[el] = 1;
+                        else
+                            modeMap[el]++;
+                        if (modeMap[el] > maxCount) {
+                            maxEl = el;
+                            maxCount = modeMap[el];
+                        }
+                    });
+                }
+                return maxEl;
+            }
+        }
+    });
+
 
 }
 

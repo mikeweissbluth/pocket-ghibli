@@ -23,7 +23,59 @@
             <div class="js-flick">
                 <!-- can make this entire div hide / appear as needed with the js-pickaFlick and js-box-flick class -->
                 <div class="js-box-flick ma mt-20px box b-w pos-r z-index-1"> 
-                    <div class="js-pickaFlick">Pick a Flick! This quiz will tell you what Ghibli film fits your mood!
+                    <div class="js-pickaFlick">
+
+                            <div id="app2" v-cloak>
+
+                                    <div class="row">
+                                      <div class="large-12 columns">
+                                        <h1>{{ quiz.title }}</h1>
+                                  
+                                        <div class="callout">
+                                  
+                                          <div v-for="(question, index) in quiz.questions">
+                                            <!-- Hide all questions, show only the one with index === to current question index -->
+                                            <div v-show="index === questionIndex">
+                                              <h3>{{ question.text }}</h3>
+                                              <ol>
+                                                <!-- for each response of the current question -->
+                                                <li v-for="response in question.responses">
+                                                  <label>
+                                                                      <input type="radio"
+                                                                             v-bind:value="response.value"
+                                                                             v-bind:name="index"
+                                                                             v-model="userResponses[index]"> {{response.text}}
+                                                                    </label>
+                                                </li>
+                                  
+                                              </ol>
+                                              <!-- The two navigation buttons -->
+                                              <!-- Note: prev is hidden on first question -->
+                                              <button class="secondary button" v-if="questionIndex > 0" v-on:click="prev">
+                                                      prev
+                                                    </button>
+                                              <button class="success button" v-on:click="next">
+                                                      next
+                                                    </button>
+                                            </div>
+                                          </div>
+                                  
+                                          <!-- Last page, quiz is finished, display result -->
+                                          <div v-show="questionIndex === quiz.questions.length">
+                                            <h3>Your Results</h3>
+                                            <p>
+                                              You should watch: {{ score() }}
+                                            </p>
+                                          </div>
+                                  
+                                        </div>
+                                  
+                                      </div>
+                                    </div>
+                                  
+                                  </div>
+
+
                     </div>
                 </div>
                 <!-- end of wrapping div -->
