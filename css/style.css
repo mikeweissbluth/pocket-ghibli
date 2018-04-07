@@ -177,8 +177,8 @@ button {
 .d-i {
     display: inline;
 }
-.d-rtl {
-    direction: rtl;
+.d-ltr {
+    direction: ltr;
 }
 
 /* F */
@@ -218,6 +218,9 @@ button {
 }
 .flex-grow-1 {
     flex-grow: 1;
+}
+.flex-dr {
+    flex-direction: row;
 }
 
 /* footer */
