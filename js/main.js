@@ -117,7 +117,7 @@ function movieRefCall() {
 
 function flickPicker() {
     var quiz = {
-        title: 'Pick-a-Flick!',
+        title: 'Pick-a-Flick! Take this quiz to find out which Studio Ghibli film fits your mood best.',
 
         questions: [{
                 text: "It’s raining cats and dogs, do you curl up with a hot cuppa and a good book or do you put on your wellies and stomp in the puddles?",
@@ -343,7 +343,7 @@ function flickPicker() {
 
 function spiritPicker() {
     var quiz = {
-        title: 'Hey Ghibliean! Let’s see which Ghibli creature you are',
+        title: 'Hey Ghibliean! Let’s see which Ghibli creature you are.',
 
         questions: [{
                 text: "Do you like to be friends with princesses?",
@@ -485,6 +485,13 @@ function spiritPicker() {
 }
 
 
+// var toggle = document.getElementById('toggle');
+// var content = document.getElementById('content');
+
+// toggle.addEventListener('click', function(){
+//   content.classList.toggle('open');
+//   console.log('even fired!');
+// });
 
 //EVENTS
     $(document).on("click", ".js-movie-button", function() {
@@ -498,6 +505,7 @@ function spiritPicker() {
         removeClass(recentlyAddedClass);
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
+
     });
     $(document).on('click', '.js-movieRef', movieRefCall);
     //Click of Movie Quiz
@@ -514,8 +522,9 @@ function spiritPicker() {
         window.location.href = './index.html';
     })
     $(document).on("click", ".js-toggle", function() {
-        $(".js-box-ref").toggleClass("d-n")
+        $(".js-box-ref").toggleClass("d-n");
     })
+
     if ($(".js-ref")) {
         renderMovieRef();
     }

@@ -12,10 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
-<body>
-    <div class="bg-spiritquiz font">
-        <!-- This will populate images raining down at the end -->
-        <div id="images">
+<body class="bg-spiritquiz">
+    <div class="font ml-100-sm">
             <!-- header -->
             <div class="d-i">
                 <img src="./images/studiog.png" width="950" height="415"/>
@@ -26,10 +24,10 @@
             <!-- wrapping div -->
             <div class="js-spirit">
                 <!-- div to wrap spirit quiz and style box behind it -->
-                <div class="js-box-spirit ma mt-20px box b-w pos-r z-index-1">
+                <div class="js-box-spirit ma mt-20px box box-shadow pos-r z-index-1">
                     <div class="js-spiritQuiz">
                         <div id="app" v-cloak>
-                            <h1>{{ quiz.title }}</h1>
+                            <h1 class="fs-25px f-bold mb-20px">{{ quiz.title }}</h1>
                             <div class="callout">
                                 <div v-for="(question, index) in quiz.questions">
                                     <!-- Hide all questions, show only the one with index === to current question index -->

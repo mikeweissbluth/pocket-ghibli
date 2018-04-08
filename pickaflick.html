@@ -12,8 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  
 </head>
-<body>
-    <div class="bg-pickaflick font">
+<body class="bg-pickaflick font">
+    <div>
         <div id="background">
                 <div class="d-i">
                         <img src="./images/studiog.png" width="950" height="415"/>
@@ -22,14 +22,14 @@
                     </div>
             <div class="js-flick">
                 <!-- can make this entire div hide / appear as needed with the js-pickaFlick and js-box-flick class -->
-                <div class="js-box-flick ma mt-20px box b-w pos-r z-index-1"> 
+                <div class="js-box-flick ma mt-20px box box-shadow pos-r z-index-1"> 
                     <div class="js-pickaFlick">
 
                             <div id="app2" v-cloak>
 
                                     <div class="row">
                                       <div class="large-12 columns">
-                                        <h1>{{ quiz.title }}</h1>
+                                        <h1 class="fs-25px f-bold mb-20px">{{ quiz.title }}</h1>
                                   
                                         <div class="callout">
                                   
