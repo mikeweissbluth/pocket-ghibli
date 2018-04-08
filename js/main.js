@@ -4,10 +4,6 @@
 let recentlyAddedClass = "";
 let recentlyEditedElement = "";
 
-//variables in order to be able to manipulate changing images
-let recentlyAddedImage = "";
-let recentlyEditedImage = "";
-
 //FUNCTIONS
 function renderMovieRef() {
     let movieRefArray = [
@@ -81,7 +77,6 @@ function renderMovieRef() {
     for (let i = 0; i < movieRefArray.length; i++) {
         var movieRefItem = $("<button>");
         movieRefItem.addClass("flex-auto");
-        // movieRefItem.addClass("button-main");
         movieRefItem.addClass("js-movieRef");
         movieRefItem.attr("data-classToAdd", movieRefArray[i].addbackground);
         movieRefItem.attr("data-imageToAdd", movieRefArray[i].image);
@@ -485,14 +480,6 @@ function spiritPicker() {
 }
 
 
-// var toggle = document.getElementById('toggle');
-// var content = document.getElementById('content');
-
-// toggle.addEventListener('click', function(){
-//   content.classList.toggle('open');
-//   console.log('even fired!');
-// });
-
 //EVENTS
     $(document).on("click", ".js-movie-button", function() {
         window.location.href='./reference.html';
@@ -523,6 +510,7 @@ function spiritPicker() {
     })
     $(document).on("click", ".js-toggle", function() {
         $(".js-box-ref").toggleClass("d-n");
+        $(".js-box-fade").fadeToggle();
     })
 
     if ($(".js-ref")) {
