@@ -489,7 +489,9 @@ function spiritPicker() {
         let dataFromDom = $(this).data().classtoadd;
         // console.log("data elem: ", $(this).data().classtoadd);
         $("#background").addClass(dataFromDom);
+        if (recentlyAddedClass !== dataFromDom) {
         removeClass(recentlyAddedClass);
+        }
         recentlyAddedClass = dataFromDom;
         recentlyEditedElement = $(this);
 
