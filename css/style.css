@@ -176,8 +176,9 @@ button:focus {
     color: #FA6E90;
 }
 .cursor-custom {
-    cursor: url('../images/noface.png'), auto;	
+    cursor: url(../images/noface.png), move;	
 }
+
 
 
 /* D */
@@ -286,6 +287,10 @@ button:focus {
 .images {
     height: 230px; 
     width: 153px; 
+}
+.image-auto {
+    max-width: 100%;
+    height: auto;
 }
 
 /* M */
@@ -494,8 +499,8 @@ button:focus {
 @media screen and (max-width: 980px) {
 
     .box {
-        height: 400px;
-        width: 500px;
+        height: auto;
+        width: auto;
     }
     .ml-40px {
         margin-left: 40px;
@@ -503,11 +508,17 @@ button:focus {
     .mr-40px {
         margin-right: 40px;
     }
+    .width950lg {
+        width: 950px;
+    }
+    .height415lg {
+        height: 415px; 
+    }
 
 
   }
 
-
+/* class="width950lg height415lg width475md height207md" */
 /* Media Queries */
 /* Desktop */
 @media screen 
@@ -527,6 +538,7 @@ and (min-width: 769px) {
 .mt-30vh-lg {
     margin-top: 30vh;
 }
+
 
 }
 
